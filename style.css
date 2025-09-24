@@ -3,14 +3,22 @@
   background-color: rgb(175, 98, 25);
   color: white;
   padding: 10px 20px;
-  border: none;
+  border: radius 30px;
   cursor: pointer;
 }
 
 #monBouton.maClasse {
-  background-color: blue;
+  background-color: green;
 }
 
 .champ.error {
   border: 2px solid red;
+}
+.devises-select{
+  background-color: blue;
+
+}
+
+#monbutton.red{
+    background-color: red;
 }
