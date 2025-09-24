@@ -5,3 +5,5 @@ fetch(apiBase + apiKey + "/latest/USD")
     .then(promise => promise.json())
     .then(data => console.log(data))
     .catch(error => console.error(error))
+
+// J'adore mon chat meme si il est débile
