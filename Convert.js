@@ -1,14 +1,27 @@
 const apiBase = "https://v6.exchangerate-api.com/v6/";
 const apiKey = "12fd69d0539580d13bdd11c4";
-const select = document.getElementById("devises-select");
+const select1 = document.getElementById("devises-select1");
+const select2 = document.getElementById("devises-select2");
 
+let coef = 0;
 
 fetch(apiBase + apiKey + "/codes")
     .then(promise => promise.json())
     .then(data => {
-        console.log(data)
         data.supported_codes.forEach(monnaie => {
-        select.innerHTML += `<option value="${monnaie}">${monnaie}</option>`;
+        select1.innerHTML += `<option value=${monnaie[0]}>${monnaie[1]}</option>`;
+        select2.innerHTML += `<option value=${monnaie[0]}>${monnaie[1]}</option>`;
         });
     })
     .catch(error => console.error(error))
+
+select1.addEventListener("change", () => {
+    fetch(apiBase + apiKey + "/latest/" + select1.value)
+    .then(promise => promise.json())
+    .then (data => {
+        console.log(data.conversion_rates.select2.value);
+    })
+    .catch(error => console.error(error))
+     
+
+});
