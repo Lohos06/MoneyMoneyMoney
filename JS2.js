@@ -10,13 +10,6 @@ form.addEventListener("submit", (e) => {
     if(nombre.value == ""){
         error.innerHTML = "<span>Le nombre est obligatoire</span>"
     }
-    else{
-        error.innerHTML = ""
-
-        for(let i = 1; i <= 10; i++ ){
-            resultat.innerHTML += `${nombre.value} x ${i} = ${nombre.value * i}<br/>`
-        }
-    }
 })
 
 nombre.addEventListener("blur", () => {
