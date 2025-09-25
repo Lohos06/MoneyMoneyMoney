@@ -7,6 +7,17 @@ const nombre = document.getElementById("nombre");
 const form = document.querySelector("form")
 const history = document.getElementById('history')
 
+let date = new Date();
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric"
+};
+
 function Convert() {
 
     if(select1.value != "Choisiser une option :" && select2.value != "Choisiser une option :") {
@@ -52,7 +63,8 @@ form.addEventListener("submit", (e) => {
     e.preventDefault()
 
     if (resultat.innerHTML != "") {
-        localStorage.setItem(Date.now(), resultat.innerHTML);
+        date = new Date();
+        localStorage.setItem(date.toLocaleDateString(undefined, options), resultat.innerHTML);
     }
 
     history.innerHTML = ""
