@@ -1,4 +1,4 @@
-const form = document.querySelector("form")
+
 const error = document.querySelector(".error")
 
 form.addEventListener("submit", (e) => {
