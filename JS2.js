@@ -1,28 +1,29 @@
-const bouton = document.getElementById('monBouton');
-bouton.classList.add('maClasse'); // Ajoute la classe "maClasse" à l'élément
-bouton.classList.remove('maClasse'); // Supprime la classe "maClasse" à l'élément
-bouton.classList.toggle('maClasse'); // Ajoute ou supprime la classe "maClasse" à l'élément
-const btn = document.querySelector("monbouton")
 
-btn.addEventListener("click", () => {
-    btn.classList.toggle("red")
-});
+const form = document.querySelector("form")
+const nombre = document.querySelector("#nombre")
+const error = document.querySelector(".error")
+const resultat = document.querySelector("#resultat")
 
-/*
-faire en sort sue si c'estnull 
-le class number devient en mode rouge avec un modal qui s'affiche*/
-const form = document.querySelector('option');
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
 
-form.addEventListener('submit', (event) =>
-    if (input.value === "") {
-        // Si rien n'est saisi
-        input.classList.add("error"); // ajoute la bordure rouge
-        message.style.display = "block"; // affiche le message d'erreur
-    } else {
-        //enlever erreur si rien toucher
-        input.classList.remove("error");
-        message.style.display = "none";
-        alert("Montant saisi : " + input.value);
+    if(nombre.value == ""){
+        error.innerHTML = "<span>Le nombre est obligatoire</span>"
     }
+    else{
+        error.innerHTML = ""
 
-});/*help*/
+        for(let i = 1; i <= 10; i++ ){
+            resultat.innerHTML += `${nombre.value} x ${i} = ${nombre.value * i}<br/>`
+        }
+    }
+})
+
+nombre.addEventListener("blur", () => {
+    if(nombre.value == ""){
+        nombre.classList.add("error")
+    }
+    else{
+        nombre.classList.remove("error")
+    }
+})

@@ -1,24 +1,31 @@
+.container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-#monBouton {
+.monBouton {
   background-color: rgb(175, 98, 25);
   color: white;
   padding: 10px 20px;
-  border: radius 30px;
+  border-radius: 20%;
   cursor: pointer;
 }
 
-#monBouton.maClasse {
-  background-color: green;
-}
 
-.champ.error {
-  border: 2px solid red;
-}
-.devises-select{
+#devises-select{
   background-color: blue;
 
 }
 
-#monbutton.red{
-    background-color: red;
+#nombre.error {
+  border: 2px solid red;
+}
+
+.error{
+    color: red;
+}
+#nombre.error {
+  border: 2px solid red;
 }

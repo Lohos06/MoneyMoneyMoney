@@ -9,21 +9,27 @@
 <body>
     <header>Coucou les amis</header>
     <main>
-
-        <label for="Devises"> Sélectionner une devise PATRICIA:</label>
-
-    <select name="devises" id="devises-select">
-        <option value="">Choisiser une option :</option>
-    </select>
-    <label for="Devises"> Sélectionner une devise BOBBY:</label>
+        <div class="container">
+        <label for="devises"> Sélectionner une devise PATRICIA:</label>
 
     <select name="devises" id="devises-select">
         <option value="">Choisiser une option :</option>
     </select>
+    <label for="devises"> Sélectionner une devise BOBBY:</label>
+
+    <select name="devises" id="devises-select">
+        <option value="">Choisiser une option :</option>
+    </select>
+        </div>
    
-     </p><input type = "number">Entrez un montant à convertir </p>
-    <button id="monBouton">Entrez</button>
-
+     <form action="">
+        <label for="nombre">Nombre</label>
+        <input type="number" name="nombre" id="nombre">
+        <p class="error"></p>
+        <br>
+        <input type="submit" value="Envoyer" class="monBouton">
+    </form>
+    <p id="resultat"></p>
     </main>
     <footer>Aurevoir les amis</footer>
 </body>
