@@ -1,7 +1,3 @@
-
-
-- Saisie du montant : Ajoutez un champ où les utilisateurs peuvent entrer le montant à convertir.
-
 - Conversion en temps réel : La conversion devrait s’effectuer en temps réel à mesure que l’utilisateur saisit le montant.
 
 - Taux de change : Utilisez des taux de change réels pour effectuer les conversions.
