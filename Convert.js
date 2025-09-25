@@ -16,12 +16,12 @@ fetch(apiBase + apiKey + "/codes")
     .catch(error => console.error(error))
 
 select1.addEventListener("change", () => {
+
     fetch(apiBase + apiKey + "/latest/" + select1.value)
     .then(promise => promise.json())
     .then (data => {
-        console.log(data.conversion_rates.select2.value);
+        console.log(data.conversion_rates[select2.value]);
     })
     .catch(error => console.error(error))
-     
-
+    
 });

@@ -5,6 +5,12 @@
   justify-content: center;
 }
 
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .monBouton {
   background-color: rgb(175, 98, 25);
   color: white;
@@ -13,8 +19,19 @@
   cursor: pointer;
 }
 
+.image{
+  height: 20px;
+  padding: 10px 10px;
+}
 
-#devises-select{
+#devises-select1{
+  height: 40px;
+  width: 150px;
+  background : linear-gradient(to right, #549cbf,#7d90e1,#552fb2) ;
+  border-radius: 8%;
+}
+
+#devises-select2{
   background-color: blue;
 
 }
