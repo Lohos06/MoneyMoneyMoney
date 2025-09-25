@@ -1,4 +1,4 @@
-- Sélection des devises : Les utilisateurs doivent pouvoir sélectionner les devises source et cible à partir de listes déroulantes.
+
 
 - Saisie du montant : Ajoutez un champ où les utilisateurs peuvent entrer le montant à convertir.
 
