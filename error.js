@@ -1,4 +1,3 @@
-
 const error = document.querySelector(".error")
 
 form.addEventListener("submit", (e) => {

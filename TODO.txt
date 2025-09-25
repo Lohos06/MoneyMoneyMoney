@@ -1,8 +1,0 @@
-- Conversion en temps réel : La conversion devrait s’effectuer en temps réel à mesure que l’utilisateur saisit le montant.
-
-- Taux de change : Utilisez des taux de change réels pour effectuer les conversions.
-
-- Affichage du résultat : Affichez le résultat de la conversion de manière claire et lisible.
-
-- Historique des conversions : Enregistrez et affichez l’historique des conversions (à l’aide de localStorage), 
-                                sous la forme suivante : Date : 100 EUR = 110 USD.
