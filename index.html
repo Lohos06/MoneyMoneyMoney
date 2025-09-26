@@ -9,31 +9,29 @@
 <body>
     <header><h1>Convertisseur de Devises</h1></header>
     <main>
-        <div class="container">
-        <label for="devises"><h2>Sélectionner une devise :</label></h2> <br>
+       <div class="container">
+  <h2>Sélectionner une devise :</h2><br>
 
-    <select name="devises" id="devises-select1">
-        <option value="Choisiser une option :">Choisiser une option :</option>
-    </select>
-    <img class="image" src="imge.png" />
-    <label for="devises"> </label>
+  <select id="devises-select1">
+    <option value="">Choisissez une option</option>
+  </select>
 
-    <select name="devises" id="devises-select2">
-        <option value="Choisiser une option :">Choisiser une option :</option>
-    </select>
-        </div>
-   
-     <form action="">
-        <label for="nombre">Nombre</label>
-        <input type="number" name="nombre" id="nombre">
-        <p class="error"></p>
-        <br>
-        <input type="submit" value="Enregistrer la conversion" class="monBouton">
-    </form>
+  <img class="image" src="imge.png" alt="↔">
 
-    <section id="history"></section>
+  <select id="devises-select2">
+    <option value="">Choisissez une option</option>
+  </select>
 
-    <p id="resultat"></p>
+  <form>
+    <label for="nombre"><h2>Entrez un Montant</h2></label>
+    <input type="number" id="nombre" name="nombre">
+    <input type="submit" value="Enregistrer la conversion" class="monBouton">
+  </form>
+
+  <section id="history"></section>
+  <p id="resultat"></p>
+</div>
+
     </main>
     <footer>Aurevoir les amis</footer>
 </body>

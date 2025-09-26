@@ -1,39 +1,58 @@
+
+body{
+  background-color: rgb(17, 17, 74);
+
+}
 .container {
-  height: 200px;
+  width: 900px;
+  background-color: #bcb8e3;
+  color: #111425;
+  border-radius: 12px;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(216, 210, 210, 0.3);
+  margin: 24px auto;
+  padding: 24px;
+  gap: 24px;
+  align-items: center;
+  display: flex;              
+  align-items: center;        
+  gap: 20px;               
+  flex-wrap: wrap; 
+}
+h1{
+  color : white;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-h1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+h2{
+  color: rgb(0, 0, 0);
+  align-items: left;
 }
 
 .monBouton {
-  background-color: rgb(175, 98, 25);
+  background-color: rgb(25, 55, 175);
   color: white;
   padding: 10px 20px;
   border-radius: 20%;
   cursor: pointer;
+  align-items: left;
 }
 
 .image{
-  height: 20px;
-  padding: 10px 10px;
+  height: 30px;
 }
 
-#devises-select1{
+#devises-select1,
+#devises-select2,
+#nombre {
   height: 40px;
-  width: 150px;
-  background : linear-gradient(to right, #549cbf,#7d90e1,#552fb2) ;
-  border-radius: 8%;
-}
-
-#devises-select2{
-  background-color: blue;
-
+  width: 220px;
+  background: linear-gradient(to right,#549cbf,#7d90e1,#552fb2);
+  border-radius: 8px;
+  border: none;
+  color: #000000;
+  padding: 0 0px;
 }
 
 #nombre.error {
