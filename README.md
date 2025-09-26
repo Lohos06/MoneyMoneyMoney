@@ -1,6 +1,6 @@
 # MoneyMoneyMoney
 
-Ce projet consiste a faire en equipe un convertisseure de monnaie
+Ce projet consiste à faire en équipe un convertisseur de monnaies
 
 Technologies inclues :
 
@@ -10,4 +10,4 @@ Technologies inclues :
 
 Api externe :
 
-- exchangerate API
+- exchangerate API (devises et taux de changes)
