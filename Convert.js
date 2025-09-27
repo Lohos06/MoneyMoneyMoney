@@ -1,6 +1,6 @@
 // variables de l'url api exchangerate
 const apiBase = "https://v6.exchangerate-api.com/v6/";
-const apiKey = "12fd69d0539580d13bdd11c4";
+const apiKey = "08db352af22a4bed96682556";
 
 // le formulaire
 const form = document.querySelector("form")

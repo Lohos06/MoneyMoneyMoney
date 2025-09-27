@@ -7,34 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>Convertisseur de Devises</h1></header>
+
+    <header>
+      <h1>Convertisseur de Devises</h1>
+      <!--bouton pour changer de mode-->
+      <button id="toggle-mode" onclick="myFunction()">☀️</button>
+    </header>
     <main>
-       <div class="container">
-  <h2>Sélectionner une devise :</h2><br>
+      
+      <!--le container principal-->
+    <div class="container">
+      <!--colonne de gauche -->
+    <section class="left">
+      <h2>Sélectionner une devise :</h2><br><br>
+      
+      <!--selecteurs de devises-->
+      <div class="selects-row">
+      <select id="devises-select1">
+        <option value="">Choisissez une option</option>
+      </select>
 
-  <select id="devises-select1">
-    <option value="">Choisissez une option</option>
-  </select>
+      <img class="image" src="imge.png" >
 
-  <img class="image" src="imge.png" alt="↔">
+      <select id="devises-select2">
+        <option value="">Choisissez une option</option>
+      </select>
+      </div>
+      <form >
+        <label for="nombre"><h3>Entrez un Montant</h3></label>
+        <input type="number" id="nombre" name="nombre"> <!--champ pour entrer un Montant-->
+        <!--bouton pour enregistrer la conversion dans l'historique-->
+        <input type="submit" value="Enregistrer la conversion" class="monBouton"> 
+        <!-- zone pour afficher l' erreur -->
+        <p class="error"></p> 
+      </form>
+    </section>
+    <!--colonne droite -->
+    <section class="right">
+  <h3>Historique</h3>
+  <div id="history"></div>  <!--historique de la conversion-->
+  <p id="resultat"></p> <!--resultat de la conversion-->
+</section> 
 
-  <select id="devises-select2">
-    <option value="">Choisissez une option</option>
-  </select>
-
-  <form>
-    <label for="nombre"><h2>Entrez un Montant</h2></label>
-    <input type="number" id="nombre" name="nombre">
-    <input type="submit" value="Enregistrer la conversion" class="monBouton">
-  </form>
-
-  <section id="history"></section>
-  <p id="resultat"></p>
-</div>
-
-    </main>
-    <footer>Aurevoir les amis</footer>
-</body>
+</div>     
+</main>
+    
 <script src="Convert.js"></script>
 <script src="error.js"></script>
+<script src="Lightmode.js"></script>
+</body>
 </html>

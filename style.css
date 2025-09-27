@@ -3,65 +3,196 @@ body{
   background-color: rgb(17, 17, 74);
 
 }
-.container {
+/* theme light mode*/
+body.light-mode {
+  background-color: rgb(255, 255, 255);
+}
+
+header {
+  position: relative;   
+  padding: 10px 20px;
+}
+
+h1 {
+  margin: 0;
+  text-align: center; 
+  color: white;
+}
+
+body.light-mode h1{
+  color: #000;
+}
+
+#toggle-mode {
+  position: absolute; /* bouton placé à droite du titre */
+  right: 20px;         
+  top: 50%;            
+  border: none;
+  background: transparent;
+  font-size: 150%;
+  cursor: pointer;
+}
+/*container avec 2 colonnes*/
+.container{ 
   width: 900px;
+  margin: 20px auto 60px;
+  padding: 20px 24px;
+  background:#bcb8e3;
+  color:#111425;
+  border:1px solid #333;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(216,210,210,.3);
+
+  display:grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes */
+  gap: 28px;
+  align-items:start;
+}
+
+/* colonne de gauche */
+.left{
+  display:flex;
+  flex-direction:column;
+}
+
+/*colonne de droite*/
+.right{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*Sélecteurs devises*/
+.selects-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-top: 0;
+}
+.image{
+  height: 30px;
+}
+
+#devises-select1,
+#devises-select2{
+  height:40px;
+  width:200px;
+  background:#bcb8e3;
+  border:1px solid #000;     
+  border-radius:8px;
+  color:#000;
+  padding:0 8px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  transform-origin: left center; 
+}
+
+/* effet zoom  survol */
+#devises-select1:hover,
+#devises-select2:hover {
+  transform: scale(1.1); 
+  cursor: pointer;
+}
+/*titre secondaire*/
+h2 {
+  margin: 0;                 
+  padding: 0;                
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+h3{
+  margin-top: 10%;
+  gap : 10px;
+  margin-left: 33%;
+}
+/* champ montant*/
+#nombre {
+  height: 40px;
+  width: 220px;
   background-color: #bcb8e3;
-  color: #111425;
-  border-radius: 12px;
-  border: 1px solid #333;
-  box-shadow: 0 4px 12px rgba(216, 210, 210, 0.3);
-  margin: 24px auto;
-  padding: 24px;
-  gap: 24px;
-  align-items: center;
-  display: flex;              
-  align-items: center;        
-  gap: 20px;               
-  flex-wrap: wrap; 
-}
-h1{
-  color : white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-h2{
-  color: rgb(0, 0, 0);
-  align-items: left;
+  border-radius: 8px;
+  border-color: #000000;
+  color: #000000;
+  padding: 0 0px;
+  margin-left: 25%;
+  padding-left: 5%;
+  
 }
 
 .monBouton {
   background-color: rgb(25, 55, 175);
   color: white;
   padding: 10px 20px;
-  border-radius: 20%;
+  border-radius: 8%;
   cursor: pointer;
-  align-items: left;
+  bottom : 50%;
+  margin-top: 5%;
+  margin-left : 30%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/*effet bouton changement couleur et pop*/
+.monBouton:hover {
+  background-color: rgb(40, 80, 220); 
+  transform: translateY(-2px);        /* effet pop */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-.image{
-  height: 30px;
-}
-
-#devises-select1,
-#devises-select2,
-#nombre {
-  height: 40px;
-  width: 220px;
-  background: linear-gradient(to right,#549cbf,#7d90e1,#552fb2);
-  border-radius: 8px;
-  border: none;
-  color: #000000;
-  padding: 0 0px;
-}
-
+/* on change la bordure du champ en rouge quand rien n'est rempli*/
 #nombre.error {
   border: 2px solid red;
 }
-
+/*style du message d'erreur*/
 .error{
     color: red;
+    text-align: left;  
+    margin-left: 35%;
 }
-#nombre.error {
-  border: 2px solid red;
+
+/* tout en colonne pour le responsive*/
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* une seule colonne */
+    width: 60%;
+  }
+
+  .right {
+    width: 60%;   
+    margin-left: 30%;       
+    justify-content: center;
+   }
+
+  .left {
+    width: 60%;   
+    margin-right: 50%;       
+    justify-content: center;
+  }
+
+  h2,h3{
+    margin-left: 10%;
+  }
+  .image{
+    margin-left :60%;
+  }
+  .selects-row {
+    flex-direction: column; 
+    gap: 10px;               
+  }
+
+  #nombre{
+    width: 60%;             
+    max-width: none;       
+    margin-left: 50%;
+  }
+  
+  #devises-select1,
+  #devises-select2,
+  .monBouton {
+    width: 60%;             
+    max-width: none;       
+    margin-left: 60%;  
+  }
+
+  .monBouton {
+    margin-left: 30%;    
+    width: 110%;    
+  }
 }
