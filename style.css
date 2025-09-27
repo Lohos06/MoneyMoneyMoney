@@ -118,6 +118,10 @@ h3{
   
 }
 
+fieldset {
+  border: none;
+}
+
 .monBouton {
   background-color: rgb(25, 55, 175);
   color: white;
