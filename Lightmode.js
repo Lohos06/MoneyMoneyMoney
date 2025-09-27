@@ -1,17 +1,21 @@
-function myFunction() {
-  // le light mode change le body
-  var element = document.body;
+function changeTheme() {
+
   //le bouton permet de changer de mode
   var btn = document.getElementById("toggle-mode");
-  // activer/désactiver le mode clair
-  element.classList.toggle("light-mode");
 
-  //si l'élement est en light mode alors
-  if (element.classList.contains("light-mode")) {
-    // la lune s'affiche pour montrer qu'on peut retourner en dark mode 
+  // activer/désactiver le mode clair
+  document.body.classList.toggle("light-mode");
+
+  //si le light mode est detecté
+  if (document.body.classList.contains("light-mode")) {
+
+    // la lune s'affiche pour montrer qu'on peut revenir en dark mode 
     btn.textContent = "🌙";
+
   } else {
-    // l'inverse
+
+    // sinon il affiche que l'on peut passer en light mode
     btn.textContent = "☀️";
+
   }
 }

@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Convertisseur de Devises</title>
+    <meta name="description" content="Convertisseur de devise en temps reel">
+
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
 
     <header>
       <h1>Convertisseur de Devises</h1>
-      <!--bouton pour changer de mode-->
-      <button id="toggle-mode" onclick="myFunction()">☀️</button>
+      <!--bouton pour changer de theme (sombre de base, claire au click)-->
+      <button id="toggle-mode" onclick="changeTheme()">☀️</button>
     </header>
     <main>
       
-      <!--le container principal-->
-    <div class="container">
-      <!--colonne de gauche -->
-    <section class="left">
-      <h2>Sélectionner une devise :</h2><br><br>
-      
-      <!--selecteurs de devises-->
-      <div class="selects-row">
-      <select id="devises-select1">
-        <option value="">Choisissez une option</option>
-      </select>
+      <div class="container">
 
-      <img class="image" src="imge.png" >
+        <!-- section de gauche servant a la conversion -->
+        <section class="left">
+          <form >
+            <h2>Sélectionner une devise :</h2><br><br>
+            
+            <!--selecteurs de devises-->
+            <fieldset class="selects-row">
 
-      <select id="devises-select2">
-        <option value="">Choisissez une option</option>
-      </select>
-      </div>
-      <form >
-        <label for="nombre"><h3>Entrez un Montant</h3></label>
-        <input type="number" id="nombre" name="nombre"> <!--champ pour entrer un Montant-->
-        <!--bouton pour enregistrer la conversion dans l'historique-->
-        <input type="submit" value="Enregistrer la conversion" class="monBouton"> 
-        <!-- zone pour afficher l' erreur -->
-        <p class="error"></p> 
-      </form>
-    </section>
-    <!--colonne droite -->
-    <section class="right">
-  <h3>Historique</h3>
-  <div id="history"></div>  <!--historique de la conversion-->
-  <p id="resultat"></p> <!--resultat de la conversion-->
-</section> 
+              <select id="devises-select1">
+                <option value="">Choisissez une option</option>
+              </select>
 
-</div>     
-</main>
+              <img class="image" src="imge.png" >
+
+              <select id="devises-select2">
+                <option value="">Choisissez une option</option>
+              </select>
+
+            </fieldset>
+
+            <!--saisie du montant et affichage du resultat de la conversion en temps reel-->
+            <fieldset>
+
+              <label for="nombre"><h3>Entrez un Montant</h3></label>
+              <!--champ pour entrer un Montant-->
+              <input type="number" id="nombre" name="nombre">
+
+              <!-- zone pour afficher l' erreur -->
+              <p id="error"></p>
+
+              <!--resultat de la conversion-->
+              <p id="resultat"></p>
+
+            </fieldset> 
+
+              <!--bouton pour enregistrer la conversion dans l'historique-->
+              <input type="submit" value="Enregistrer la conversion" class="monBouton"> 
+
+          </form>
+        </section>
+
+        <!--section droite destinée a l'historique -->
+        <section class="right">
+          <h3>Historique</h3>
+          <div id="history"></div>  <!--historique des conversions-->
+        </section> 
+
+        </div>     
+    </main>
     
-<script src="Convert.js"></script>
-<script src="error.js"></script>
-<script src="Lightmode.js"></script>
-</body>
+  <script src="Convert.js"></script>
+  <script src="error.js"></script>
+  <script src="Lightmode.js"></script>
+  </body>
 </html>
